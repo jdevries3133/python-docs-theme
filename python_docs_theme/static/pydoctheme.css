@@ -1,7 +1,44 @@
 @import url("default.css");
 
+:root {
+  /* text colors */
+  --clr-link: #0090c0;
+  --clr-link-visited: #00608f;
+  --clr-link-hover: #00B0E4;
+  --clr-headings: #1a1a1a;
+  --clr-heading-link: #aaaaaa;
+  --clr-sidebar-link: #0095C4; /* also used in the footer */
+
+  /* these colors feel unnecessary */
+  --clr-refcount: #060;
+  --clr-stableabi: #229;
+
+  /* background colors */
+  --clr-bg: white;
+  --clr-bg-code: #eeffcc;
+  --clr-bg-sidebar: #ccc; /* this is also the bottom border of the header */
+  --clr-bg-seealso: #dddd66;
+
+  /* border colors */
+  --clr-border:#ddd;
+  --clr-border-code: #ac9; /* also used by <pre> */
+
+  /* more shades of gray than an airport bookstore in here */
+  --gray-200: #222;
+  --gray-300: #333;
+  --gray-400: #444;
+  --gray-500: #555;
+  --gray-600: #666;
+  --gray-700: #999;
+  --gray-750: #a9a9a9;
+  --gray-800: #ddd;
+  --gray-850: #ededed;
+  --gray-900: #eee;
+
+}
+
 body {
-    background-color: white;
+    background-color: var(--clr-bg);
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -14,7 +51,7 @@ body {
 div.related {
     margin-bottom: 1.2em;
     padding: 0.5em 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--clr-bg-sidebar);
     margin-top: 0.5em;
 }
 
@@ -23,7 +60,7 @@ div.related a:hover {
 }
 
 div.related ~ div.related {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--clr-bg-sidebar);
     border-bottom: none;
 }
 
@@ -38,7 +75,7 @@ div.related ~ div.related {
 .version_switcher_placeholder,
 .language_switcher_placeholder {
     padding-left: 5px;
-    background-color: white;
+    background-color: var(--clr-bg);
 }
 
 .inline-search {
@@ -60,7 +97,7 @@ div.sphinxsidebar {
     position: sticky;
     top: 0;
     max-height: 100vh;
-    background-color: #eeeeee;
+    background-color: var(--gray-900);
     border-radius: 5px;
     line-height: 130%;
     font-size: smaller;
@@ -86,13 +123,13 @@ div.sphinxsidebarwrapper > ul > li > ul > li {
 }
 
 div.sphinxsidebar a:hover {
-    color: #0095C4;
+    color: var(--clr-sidebar-link);
 }
 
 form.inline-search input,
 div.sphinxsidebar input {
     font-family: 'Lucida Grande',Arial,sans-serif;
-    border: 1px solid #999999;
+    border: 1px solid var(--gray-700);
     font-size: smaller;
     border-radius: 3px;
 }
@@ -123,7 +160,7 @@ div.body hr {
 
 div.body pre {
     border-radius: 3px;
-    border: 1px solid #ac9;
+    border: 1px solid var(--clr-border-code);
 }
 
 div.body div.admonition, div.body div.impl-detail {
@@ -135,19 +172,19 @@ div.body div.impl-detail > p {
 }
 
 div.body div.seealso {
-    border: 1px solid #dddd66;
+    border: 1px solid var(--clr-bg-seealso);
 }
 
 div.body a {
-    color: #0072aa;
+    color: var(--clr-link);
 }
 
 div.body a:visited {
-    color: #6363bb;
+    color: var(--clr-link-visited);
 }
 
 div.body a:hover {
-    color: #00B0E4;
+    color: var(--clr-link-hover);
 }
 
 tt, code, pre {
@@ -168,7 +205,7 @@ div.body tt.xref, div.body a tt, div.body code.xref, div.body a code {
 }
 
 table.docutils {
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-800);
     min-width: 20%;
     border-radius: 3px;
     margin-top: 10px;
@@ -176,7 +213,7 @@ table.docutils {
 }
 
 table.docutils td, table.docutils th {
-    border: 1px solid #ddd !important;
+    border: 1px solid var(--gray-800) !important;
     border-radius: 3px;
 }
 
@@ -185,12 +222,12 @@ table p, table li {
 }
 
 table.docutils th {
-    background-color: #eee;
+    background-color: var(--gray-900);
     padding: 0.3em 0.5em;
 }
 
 table.docutils td {
-    background-color: white;
+    background-color: var(--clr-bg);
     padding: 0.3em 0.5em;
 }
 
@@ -207,15 +244,15 @@ div.footer {
 }
 
 div.footer a:hover {
-    color: #0095C4;
+    color: var(--clr-sidebar-link);
 }
 
 .refcount {
-    color: #060;
+    color: var(--clr-refcount);
 }
 
 .stableabi {
-    color: #229;
+    color: var(--clr-stableabi);
 }
 
 .highlight {
@@ -275,7 +312,7 @@ dl > dt span ~ em {
         position: fixed;
         top: 0;
         left: 0;
-        background-color: white;
+        background-color: var(--clr-bg);
         box-shadow: rgba(0, 0, 0, 0.25) 0 0 2px 0;
         z-index: 1;
     }
@@ -293,7 +330,7 @@ dl > dt span ~ em {
         padding: 0 1rem 0 45px;
         display: flex;
         align-items: center;
-        background-color: white;
+        background-color: var(--clr-bg);
     }
     .nav-logo {
         margin-right: 0.7rem;
@@ -313,7 +350,7 @@ dl > dt span ~ em {
         flex: 1 1 auto;
         align-items: center;
         padding: 0 0 0 2px;
-        border: 1px solid #a9a9a9;
+        border: 1px solid var(--gray-750);
         height: 30px;
         overflow: hidden;
     }
@@ -334,14 +371,14 @@ dl > dt span ~ em {
         appearance: none;
         -webkit-appearance: none;
         border: 1px solid transparent;
-        border-left-color: #a9a9a9;
+        border-left-color: var(--gray-750);
         box-shadow: none;
         cursor: pointer;
-        background-color: #f0f0f0;
+        background-color: var(--gray-750);
         margin-right: 0;
     }
     .nav-content .search input[type=submit]:hover {
-        border-color: #a9a9a9;
+        border-color: var(--gray-750);
     }
     .nav-content .search svg {
         flex: 0 0 20px;
@@ -365,7 +402,7 @@ dl > dt span ~ em {
         top: 0;
         left: 0;
         background-color: transparent;
-        border: 1px solid white;
+        border: 1px solid var(--clr-bg);
         box-shadow: none;
         z-index: 3;
         display: flex;
@@ -374,13 +411,13 @@ dl > dt span ~ em {
         padding: 0 8px;
     }
     .toggler__label:focus {
-        background-color: #eee;
-        border: 1px solid #ededed;
+        background-color: var(--gray-900);
+        border: 1px solid var(--gray-850);
         box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
     }
     .toggler__label:hover {
-        background-color: #eee;
-        border: 1px solid #ededed;
+        background-color: var(--gray-900);
+        border: 1px solid var(--gray-900);
         box-shadow: rgba(0, 0, 0, 0.25) 1px 0 2px 0;
     }
     .toggler__label > span {
@@ -388,7 +425,7 @@ dl > dt span ~ em {
         flex: none;
         height: 2px;
         width: 100%;
-        background: #444;
+        background: var(--gray-400);
         transition: all 400ms ease;
     }
     .toggler__label > span::before,
@@ -451,7 +488,7 @@ dl > dt span ~ em {
         font-size: 1.3em;
     }
     .menu-wrapper h3 {
-        color: #444444;
+        color: var(--gray-400);
         font-size: 1.4em;
     }
     .menu-wrapper h3 + p,
@@ -460,7 +497,7 @@ dl > dt span ~ em {
     }
     .menu a {
         font-size: smaller;
-        color: #444444;
+        color: var(--gray-400);
         text-decoration: none;
     }
     .menu ul {
@@ -479,7 +516,7 @@ dl > dt span ~ em {
     .language_switcher_placeholder,
     .version_switcher_placeholder {
         position: relative;
-        border: 1px solid #a8a8a8;
+        border: 1px solid var(--gray-700);
         height: 30px;
         padding-right: 7px;
     }
@@ -502,7 +539,7 @@ dl > dt span ~ em {
         appearance: none;
         border: 0;
         height: 100%;
-        background-color: white;
+        background-color: var(--clr-bg);
     }
     .language_switcher_placeholder:focus-visible,
     .version_switcher_placeholder:focus-visible {
