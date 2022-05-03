@@ -54,6 +54,16 @@
         </form>
     </div>
     {%- endif %}
+
+    <form id="colorscheme-picker" class="inline-search">
+        <select>
+          <option>light mode</option>
+          <option>dark mode</option>
+          <option>dark mode (low contrast)</option>
+        </select>
+        <button>Set Theme</button>
+    </form>
+
 {%- endmacro %}
 
 {% block relbar1 %} {% if builder != 'qthelp' %} {{ relbar() }} {% endif %} {% endblock %}
@@ -66,6 +76,7 @@
         {%- if not embedded %}
             <script type="text/javascript" src="{{ pathto('_static/copybutton.js', 1) }}"></script>
             <script type="text/javascript" src="{{ pathto('_static/menu.js', 1) }}"></script>
+            <script type="text/javascript" src="{{ pathto('_static/colorscheme.js', 1) }}"></script>
         {%- endif -%}
     {%- endif -%}
     {{ super() }}

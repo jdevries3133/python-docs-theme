@@ -23,6 +23,31 @@
   --clr-border:#ddd;
   --clr-border-code: #ac9; /* also used by <pre> */
 
+}
+
+[data-theme="dark mode"] {
+  /* text colors */
+  --clr-link: #0090c0;
+  --clr-link-visited: #00608f;
+  --clr-link-hover: #00B0E4;
+  --clr-headings: #1a1a1a;
+  --clr-heading-link: #aaaaaa;
+  --clr-sidebar-link: #0095C4; /* also used in the footer */
+
+  /* these colors feel unnecessary */
+  --clr-refcount: #060;
+  --clr-stableabi: #229;
+
+  /* background colors */
+  --clr-bg: white;
+  --clr-bg-code: #eeffcc;
+  --clr-bg-sidebar: #ccc; /* this is also the bottom border of the header */
+  --clr-bg-seealso: #dddd66;
+
+  /* border colors */
+  --clr-border:#ddd;
+  --clr-border-code: #ac9; /* also used by <pre> */
+
   /* more shades of gray than an airport bookstore in here */
   --gray-200: #222;
   --gray-300: #333;
@@ -34,8 +59,44 @@
   --gray-800: #ddd;
   --gray-850: #ededed;
   --gray-900: #eee;
-
 }
+
+[data-theme="dark mode (low contrast)"] {
+  /* text colors */
+  --clr-link: #0090c0;
+  --clr-link-visited: #00608f;
+  --clr-link-hover: #00B0E4;
+  --clr-headings: #1a1a1a;
+  --clr-heading-link: #aaaaaa;
+  --clr-sidebar-link: #0095C4; /* also used in the footer */
+
+  /* these colors feel unnecessary */
+  --clr-refcount: #060;
+  --clr-stableabi: #229;
+
+  /* background colors */
+  --clr-bg: white;
+  --clr-bg-code: #eeffcc;
+  --clr-bg-sidebar: #ccc; /* this is also the bottom border of the header */
+  --clr-bg-seealso: #dddd66;
+
+  /* border colors */
+  --clr-border:#ddd;
+  --clr-border-code: #ac9; /* also used by <pre> */
+
+  /* more shades of gray than an airport bookstore in here */
+  --gray-200: #222;
+  --gray-300: #333;
+  --gray-400: #444;
+  --gray-500: #555;
+  --gray-600: #666;
+  --gray-700: #999;
+  --gray-750: #a9a9a9;
+  --gray-800: #ddd;
+  --gray-850: #ededed;
+  --gray-900: #eee;
+}
+
 
 body {
     background-color: var(--clr-bg);
